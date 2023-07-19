@@ -1,33 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="animaxlogo.png">
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Site Web Vierge</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+        </style>
+    <title>Animax</title>
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <button class="logo-button">TopaTV</button>
-        </div>
-        <h1>Mon Site Web</h1>
-    </header>
 
-    <main>
-        <section>
-            <h2>Section 1</h2>
-            <p>Bienvenue sur mon site web vierge. Vous pouvez commencer à ajouter votre contenu ici.</p>
-        </section>
+    <div class="navbar">
 
-        <section>
-            <h2>Section 2</h2>
-            <p>Ceci est une autre section de contenu. Vous pouvez personnaliser et ajouter autant de sections que vous le souhaitez.</p>
-        </section>
-    </main>
+        <ul>
+            <li> <a href="#Manga"> Manga</a></li>
+            <li> <a href="#News"> News</a></li>
+            <li> <a href="#Forum"> Forum</a></li>
+            <img src="animaxlogo.png" alt=""class="logo" style="width: 40px;">
+            <li class="logo"> <a href="#animax"> ANIMAX</a></li>
+        </ul>
+    </div>
+    
+        <hr class="rounded">
 
-    <footer>
-        <p>&copy; 2023 Mon Site Web. Tous droits réservés.</p>
-    </footer>
+        <h1 class="trending">
+            | TRENDING
+        </h1>
+
+        <<div id="demo" class="carousel slide" data-ride="carousel">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="DBS.jpg" alt="" style="width: 100%;">
+                    
+                </div>
+                <div class="mySlides fade">
+                    <img src="One Piece.jpg" alt="" style="width: 100%;">
+                    
+                </div>
+                <div class="mySlides fade">
+                    <img src="Naruto.jpg" alt="" style="width: 100%;">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+                <a class="next" onclick="plusSlides(1)">&#10095</a>
+            </div>
+
+
+        <script>
+            let slideIndex = 1;
+          showSlides(slideIndex);
+          
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+          
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+          
+          function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+           
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+            }
+           
+            slides[slideIndex-1].style.display = "block";  
+          }
+          
+    </script>
+
+
+   
 </body>
 </html>
